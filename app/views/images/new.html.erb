@@ -2,36 +2,36 @@
 
 <h1><%= t('.title', model: model_name) %></h1>
 
-<%= form_for @image do |form| %>
+<%= form_for @image, html: { class: 'pure-form pure-form-aligned' } do |form| %>
 
   <%= render 'shared/error_messages', object: form.object %>
 
-  <div class='field'>
+  <div class="pure-control-group">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
-  <div class='field'>
+  <div class="pure-control-group">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
 
-  <div class='field'>
+  <div class="pure-control-group">
     <%= form.label :category %>
     <%= form.collection_select :category, image_categories, :last, :first %>
   </div>
 
-  <div class='field'>
+  <div class="pure-control-group">
     <%= form.label :tags_text %>
     <%= form.text_field :tags_text %>
   </div>
 
-  <div class='field'>
+  <div class="pure-control-group">
     <%= form.label :photo %>
     <%= form.file_field :photo %>
   </div>
   
-  <div clas='field'>
-    <%= form.submit %>
+  <div class="pure-controls">
+    <%= form.submit class: 'pure-button pure-button-primary' %>
   </div>
 <% end %>

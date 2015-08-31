@@ -1,0 +1,32 @@
+<%- model_name = @image.class.model_name.human %>
+
+<h1><%= t('.title', model: model_name) %></h1>
+
+<%= form_for @image do |form| %>
+
+  <%= render 'shared/error_messages', object: form.object %>
+
+  <div class='field'>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class='field'>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class='field'>
+    <%= form.label :category %>
+    <%= form.collection_select :category, image_categories, :last, :first %>
+  </div>
+
+  <div class='field'>
+    <%= form.label :tags_text %>
+    <%= form.text_field :tags_text %>
+  </div>
+  
+  <div clas='field'>
+    <%= form.submit %>
+  </div>
+<% end %>

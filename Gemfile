@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'jquery-rails'
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'mini_magick'
 gem 'pg'
 gem 'puma'
 gem 'rails', '4.2.2'

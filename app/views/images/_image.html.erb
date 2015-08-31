@@ -1,5 +1,6 @@
 <div class="image-box">
   <div class="image-content">
-    <h2><%= image.name %></h2>
+    <%= image_tag image.photo.thumb.url %>
+    <h2><%= image.name.capitalize %></h2>
   </div>
 </div>
